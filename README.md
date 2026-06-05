@@ -1,130 +1,83 @@
 # Promotion Readiness Analysis – EDA Project  
-### A Data-Driven HR Analytics Case Study | GlobeHR  
+### HR Analytics Case Study  
 
 ---
 
-## Project Overview
-This project analyzes a large-scale HR dataset from a multinational organization (GlobeHR) operating across 28 regions with over 78,298 employees.
+## Overview
+Only **8.52% of employees are promoted** in this dataset — but what actually drives promotion decisions?
 
-The objective is to explore promotion patterns, identify key performance drivers, uncover potential biases, and prepare the dataset for machine learning modeling.
+This project analyzes **78,298 employee records** from a multinational organization to uncover:
+- Key drivers of promotions  
+- Potential patterns in decision-making  
+- High-performing employee signals  
+- Data quality issues affecting HR analytics  
 
-This repository includes a complete Exploratory Data Analysis (EDA) pipeline, data cleaning workflow, visualizations, and actionable insights.
+The goal is to transform raw HR data into **actionable business insights**.
 
 ---
 
 ## Business Problem
-Every year, GlobeHR conducts an internal promotion cycle. However, several challenges were identified:
+Organizations often struggle with fair and consistent promotion decisions:
 
-- Only ~8% of employees are promoted  
 - High-performing employees may be overlooked  
-- Promotion decisions vary across departments and regions  
-- Possible bias in gender, education, and recruitment channels  
-- Lack of data-driven decision-making  
+- Promotion patterns vary across departments and regions  
+- Decisions often lack a data-driven foundation  
 
-This project addresses these issues using Python-based data analysis and statistical methods.
-
----
-
-## Objectives
-- Clean and prepare the dataset for analysis and modeling  
-- Identify key drivers of employee promotion  
-- Detect potential bias in HR decisions  
-- Explore high-potential employees  
-- Build a machine-learning-ready dataset  
-- Provide actionable HR insights  
+This project uses **exploratory data analysis (EDA)** to uncover patterns and support better HR decision-making.
 
 ---
 
-## Technologies Used
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Scikit-learn  
+## Dataset
+
+- Source: Kaggle HR Analytics Dataset  
+- Total records: **78,298 employees**  
+- Train: 54,808 (70%)  
+- Test: 23,490 (30%)  
+- Both splits share identical features  
+
+**Key Features:**
+age, previous_year_rating, length_of_service, awards_won, avg_training_score
 
 ---
 
-## Dataset Information
-- Dataset contains **train (70%) and test (30%) splits**  
-- Total records: 78,298 employees  
-- Train: 54,808 records  
-- Test: 23,490 records  
-- Both datasets share identical features  
+## What I Did
 
----
+### Data Cleaning
+- Handled missing values:
+  - education → filled with "Unknown"  
+  - previous_year_rating → filled using mode  
+- Verified consistency across train/test datasets  
 
-## 📊 Exploratory Data Analysis (EDA)
-
-### Data Understanding
-- Both train and test datasets show similar distributions across key features  
-- Descriptive statistics confirm consistent behavior across datasets  
-- The test dataset is representative of the training data  
-- Key numerical features include:
-  - age  
-  - previous_year_rating  
-  - length_of_service  
-  - awards_won  
-  - avg_training_score  
-
----
-
-### Univariate Analysis
-- Identified a highly imbalanced target variable (`is_promoted`)  
-- Analyzed distributions of numerical and categorical variables  
-- Observed variation in feature distributions across dataset  
-
----
-
-### Bivariate Analysis
-- Explored relationship between features and promotion status  
-- Strong association found with:
-  - avg_training_score  
-  - previous_year_rating  
-  - awards_won  
-- Promotion rates vary across:
-  - departments  
-  - education levels  
-  - recruitment channels  
-- Performance and organizational factors strongly influence promotions  
-
----
-
-### Multivariate Analysis
-- Used correlation heatmap to analyze relationships among numerical features  
-- No significant multicollinearity observed  
-- Features show independent behavior suitable for modeling  
+### Exploratory Data Analysis
+- Univariate analysis of numerical & categorical variables  
+- Bivariate analysis to identify promotion-related patterns  
+- Correlation heatmap to check multicollinearity  
 
 ---
 
 ## Key Findings
-- The dataset is highly imbalanced:
-  - 8.52% employees promoted  
-  - 91.48% not promoted  
 
-- Missing values were found in:
-  - education: 2,409 (train), 1,034 (test)  
-  - previous_year_rating: 4,124 (train), 1,812 (test)  
+- Promotion is highly imbalanced:
+  - **8.52% promoted vs 91.48% not promoted**
 
-- Missing values were handled as:
-  - education → imputed with "Unknown"  
-  - previous_year_rating → imputed using mode  
-
-- Most important factors influencing promotion:
+- Strongest drivers of promotion:
   - previous_year_rating  
   - avg_training_score  
   - awards_won  
-  - department  
-  - education  
 
-- Statistical analysis confirmed strong relationships between promotion and key categorical variables  
+- Promotion patterns vary across:
+  - departments  
+  - education levels  
+  - recruitment channels  
+
+- Some high-performing employees appear under-promoted in specific departments  
+
+- No significant multicollinearity → dataset is suitable for ML modeling  
 
 ---
 
-## Conclusion
-Employee promotion decisions are primarily influenced by performance-related metrics such as training scores, previous ratings, and recognition. Organizational factors like department and education also play an important role.
-
-The dataset is well-structured and suitable for building predictive machine learning models.
+## Technologies Used
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 
 ---
 
@@ -132,12 +85,20 @@ The dataset is well-structured and suitable for building predictive machine lear
 - Feature encoding  
 - Handling class imbalance  
 - Model building (Logistic Regression, Random Forest, XGBoost)  
-- Model evaluation and optimization  
+- Model evaluation & optimization  
 
 ---
 
 ## Project Impact
-- Identifies bias in promotion decisions  
-- Highlights overlooked high-performing employees  
-- Supports data-driven HR policy decisions  
-- Enables predictive HR analytics  
+
+- Identifies patterns in promotion decisions  
+- Highlights potential fairness concerns for further investigation  
+- Builds a machine-learning-ready dataset  
+- Enables predictive HR analytics for decision support  
+
+---
+
+## Conclusion
+Employee promotion decisions are largely influenced by performance metrics such as training scores, past ratings, and recognition.
+
+This analysis demonstrates how data can be used to move from **subjective decisions → evidence-based HR strategy**.
