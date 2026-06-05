@@ -4,7 +4,7 @@
 ---
 
 ## Project Overview
-This project analyzes a large-scale HR dataset from a multinational organization (GlobeHR) operating across 28 regions with over 15,000 employees.
+This project analyzes a large-scale HR dataset from a multinational organization (GlobeHR) operating across 28 regions with over 78,298 employees.
 
 The objective is to explore promotion patterns, identify key performance drivers, uncover potential biases, and prepare the dataset for machine learning modeling.
 
