@@ -29,11 +29,12 @@ This project uses **exploratory data analysis (EDA)** to uncover patterns and su
 
 ## Dataset
 
-- Source: Kaggle HR Analytics Dataset  
-- Total records: **78,298 employees**  
+Source: [Kaggle HR Analytics Dataset](https://www.kaggle.com/datasets/arashnic/hr-ana)
+
+Total records: 78,298 employees  
 - Train: 54,808 (70%)  
-- Test: 23,490 (30%)  
-- Both splits share identical features  
+- Test: 23,490 (30%)
+Both splits share identical features  
 
 **Key Features:**
 age, previous_year_rating, length_of_service, awards_won, avg_training_score
@@ -99,6 +100,6 @@ Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 ---
 
 ## Conclusion
-Employee promotion decisions are largely influenced by performance metrics such as training scores, past ratings, and recognition.
+Employee promotion decisions are largely influenced by performance metrics such as training scores, past ratings, and awards won.
 
 This analysis demonstrates how data can be used to move from **subjective decisions → evidence-based HR strategy**.
